@@ -22,7 +22,7 @@ void loop() {
 
   for (int i = 0; i < 3; i++)
   {
-    displayFull(i, 0x8f); // light 0x80 ~ 0x8f 最暗 到 最亮
+    displayFull(i, 0x8f); // light 0x88 ~ 0x8f 最暗 到 最亮
     delay(5000);
   }
 }
