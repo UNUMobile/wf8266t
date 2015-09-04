@@ -16,7 +16,7 @@ void setup() {
 
 void loop() {
   displayClear(255);
-  delay(1000);
+  delay(5000);
   displayClear(0);
   delay(1000);
 
