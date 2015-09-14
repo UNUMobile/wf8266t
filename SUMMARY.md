@@ -7,6 +7,7 @@
    * [套件清單](docs/dev/list.md)
    * [開發環境準備](docs/dev/ev.md)
    * [切換燒寫模式](docs/dev/download.md) 
+   * [電路](docs/dev/circuit.md) 
 * [教程](docs/tutorials.md)
    * [點亮 LED 屏](docs/tutorials/leddemo.md)
 
