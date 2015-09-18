@@ -1,5 +1,5 @@
 #切換燒寫模式
-在 WF8266T-DEV 開發板背後有二顆按鍵，分別離 ESP8266 較近的是 Reset 另顆是 Download 也就是 GPIO0. 如下圖所示：
+在 WF8266T-DEV 開發板背後有二顆按鍵，分別離 ESP8266 較近的是 Reset(白) 另顆是 Download(紅) 也就是 GPIO0. 如下圖所示：
 
 ![](../../imgs/dev/DSC00753.JPG)
 
