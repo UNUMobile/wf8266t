@@ -2,9 +2,10 @@
 * 開發板
 * LED 聚光層
 * 鏡面質感濾光層
-* 固定螺絲 M3*4
+* 固定螺絲 M3*5
 * 螺帽 M2*4
 * 螺帽 M4*1
+* Micro USB 線
 
 ![](../../imgs/dev/DSC00735.JPG)
 
@@ -22,13 +23,18 @@
 * 長 177 mm x 高 51 mm x 厚 7 mm ~ 10 mm
 * 核心晶片 ESP8266
 * 應用服務 WF8266R
-* USB 晶片 PL2303SA
 * Micro USB
-* 溫濕度 DHT11
-* 感光器
-* 喇叭
+* USB 晶片 PL2303SA (選配)
+* 溫濕度 DHT11(選配)
+* 感光器 (選配)
+* 喇叭 (選配)
 * 夜燈 (選配)
 * BLE 4.0 iBeacon (選配)
-* 0805 貼片式 白光 藍光 綠光 紅光 LED 高亮 和 超亮 (選配)
+* 0805 貼片式 白光 藍光 綠光 紅光 LED 高亮 和 超亮 (白光)
  
 ![](../../imgs/dev/DSC00724.JPG)
+
+#驅動程式
+
+PL2303SA
+http://prolificusa.com/portfolio/pl2303sa-usb-serial-bridge-controller/
