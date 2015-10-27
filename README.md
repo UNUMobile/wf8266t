@@ -10,7 +10,7 @@ WF8266T 使用手冊
 ## WF8266T 特色
 
 
-* 線上教學平台， 強化學習互動，每個單元下方都有互動討論區，立即取得協助. http://code.unumobile.com/wf8266r/About
+* 線上教學平台， 強化學習互動，每個單元下方都有互動討論區，立即取得協助. http://wf8266.com/wf8266r
 * 提供多樣化的 API 及 雲端服務平台
 * 使用 WEB 開發技術 HTML5, Javascript, CSS, WebSocket 操作 WF8266R
 * 進階 MAKER 可以使用 Arduino IDE 開發 WF8266R, 就像開發 Arduino 一樣, 無痛轉換
