@@ -19,7 +19,6 @@ void setup() {
   tft.setTextSize(1);              //設定文字大小
 
   scanWiFi();
-
 }
 
 void loop() {
