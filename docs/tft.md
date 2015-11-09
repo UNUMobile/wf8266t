@@ -16,4 +16,4 @@
 * GPIO14: SCK
 * GPIO15: CS
 * GPIO16: LED
-* *ADC : None
+* ADC : None
