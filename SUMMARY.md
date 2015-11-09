@@ -11,7 +11,7 @@
 * [WF8266T-LED 開發板介紹](docs/led.md)
 * [WF8266T-TFT 開發板介紹](docs/tft.md)
 * [WF8266T-Touch 開發板介紹](docs/touch.md)
-* [教程](docs/tutorials.md)
+* [教程](http://code.unumobile.com/wf8266r/About)
    * [點亮 LED 屏](docs/tutorials/leddemo.md)
 * [小冊](docs/dm.md) 
 * 
