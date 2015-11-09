@@ -32,5 +32,6 @@ WF8266T由台灣通聯行動創意科技有限公司設計發展, 其核心晶�
 * 2組 Rx Tx (3V3)
 * SPI
 * I2C
+* I2S
 * 4 MBytes Flash
 
