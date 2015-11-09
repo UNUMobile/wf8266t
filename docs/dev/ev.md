@@ -11,6 +11,6 @@
 
 ###更新開發板
 在 Tools 選單中點擊 Boards Manager, 當你打開時就會自動更新, 再檢查看看 ESP8266 是否安裝成功. 如果成功你應該會看到如下畫面可以選擇 Board 是哪一種, CPU 和 上傳速度等等設定.
-![](../../imgs/dev/00_Ev_2.jpg)
+
 相關參數設置請參考下圖
 ![](../../imgs/dev/ESP8266Setting.png)
