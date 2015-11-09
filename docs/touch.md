@@ -3,7 +3,7 @@
 ![](../imgs/DSC02177.JPG)
 
 ## 預設電路
-因為 TFT 和 Touch 驅動需要 SPI 的腳位，因此尚有以下 ＊ GPIO12 這個腳位可自訂控制使用。
+因為 TFT 和 Touch 驅動需要 SPI 的腳位，因此尚有以下 ＊ GPIO12 ADC 這個腳位可自訂控制使用。
 
 * GPIO0 : UPDATE(紅色按鍵), T_CLK
 * GPIO1 : Tx, T_DOUT
@@ -16,3 +16,4 @@
 * GPIO14: SCK
 * GPIO15: CS
 * GPIO16: LED
+* *ADC : None
