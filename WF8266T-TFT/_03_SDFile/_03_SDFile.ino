@@ -16,7 +16,6 @@ void setup() {
   tft.begin();
   tft.setRotation(0);              //顯示方向
   tft.fillScreen(ILI9341_BLACK);   //填滿黑色
-  tft.fillScreen(ILI9341_BLACK);   //填滿黑色
 
   tft.setCursor(0, 0);             //設定游標位置
   tft.setTextColor(ILI9341_WHITE); //設定文字顏色

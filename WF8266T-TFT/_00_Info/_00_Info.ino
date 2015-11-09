@@ -9,6 +9,7 @@ void setup() {
   pinMode(16,OUTPUT);
   digitalWrite(16,HIGH);
   Serial.begin(115200);
+  Serial.println("Ready");
   tft.begin();
   tft.setRotation(0);              //顯示方向
   tft.fillScreen(ILI9341_BLACK);   //填滿黑色
@@ -20,6 +21,7 @@ void setup() {
   tft.setTextSize(2); 
   tft.setTextColor(ILI9341_YELLOW);
   tft.println(ESP.getChipId());
+  Serial.println(ESP.getChipId());
 }
 
 void loop() {
