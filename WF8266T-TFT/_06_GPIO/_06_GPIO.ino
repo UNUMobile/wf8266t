@@ -64,7 +64,25 @@ void serverEvent(){
     String message = "{\"p1\":\"" + p1 + "\",\"p2\":\""+p2+"\"}";
     server.send(200, "text/html", message);
     tft.println(message);
-  }); 
+  });
+
+  server.on("/gpio", []() {     //http://192.168.4.1/gpio
+    String pin="",value="";
+    server.sendHeader("Connection", "close");
+    for (uint8_t i = 0; i < server.args(); i++) {
+      if (server.argName(i) == "pin")
+        pin = server.arg(i);
+      if (server.argName(i) == "value")
+        value = server.arg(i);  
+    }
+
+    String message = "{\"pin\":\"" + pin + "\"value\":\""+value+"\"}";
+    server.send(200, "text/html", message);
+    tft.println(message);
+
+    pinMode(pin.toInt(),OUTPUT);
+    digitalWrite(pin.toInt(),value.toInt());
+  });  
 }
 
 
