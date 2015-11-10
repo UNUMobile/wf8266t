@@ -33,7 +33,21 @@ void setup() {
  
   tft.begin();
 
-  Serial.println(F("Benchmark                Time (microseconds)"));
+  
+
+  Serial.println(F("Done!"));
+
+}
+
+
+void loop(void) {
+  for(uint8_t rotation=0; rotation<4; rotation++) {
+    tft.setRotation(rotation);
+    testText();
+    delay(1000);
+  }
+
+Serial.println(F("Benchmark                Time (microseconds)"));
 
   Serial.print(F("Screen fill              "));
   Serial.println(testFillScreen());
@@ -80,19 +94,7 @@ void setup() {
 
   Serial.print(F("Rounded rects (filled)   "));
   Serial.println(testFilledRoundRects());
-  delay(500);
-
-  Serial.println(F("Done!"));
-
-}
-
-
-void loop(void) {
-  for(uint8_t rotation=0; rotation<4; rotation++) {
-    tft.setRotation(rotation);
-    testText();
-    delay(1000);
-  }
+  delay(500);  
 }
 
 unsigned long testFillScreen() {
@@ -116,9 +118,14 @@ unsigned long testText() {
   tft.setTextColor(ILI9341_RED);    tft.setTextSize(3);
   tft.println(0xDEADBEEF, HEX);
   tft.println();
-  tft.setTextColor(ILI9341_GREEN);
+  tft.setTextColor(ILI9341_WHITE);
   tft.setTextSize(5);
-  tft.println("Groop");
+  tft.print("WF8266R");
+  tft.setTextSize(3);
+  tft.print(".js");
+  tft.setTextSize(5);
+  tft.println("");
+  tft.setTextColor(ILI9341_GREEN);
   tft.setTextSize(2);
   tft.println("I implore thee,");
   tft.setTextSize(1);

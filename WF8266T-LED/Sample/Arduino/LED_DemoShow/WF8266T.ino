@@ -10,10 +10,11 @@ uint8_t numberCodeOffset [7] = {0xc0, 0xc4, 0xc8, 0xcc, 0xc1, 0xc7, 0xcb};
 uint8_t numberCodeP6 [15] = {
   128, 0, 128, 128, 128, 128, 128, 128, 128, 128, 0, 0, 0 , 0 , 0
 };
-uint8_t fullBuffer[3][16] = {
+uint8_t fullBuffer[4][16] = {
   { 190, 138, 96, 134, 225, 133, 199, 11, 15, 0, 224, 15, 4, 10, 254, 0 }, // 0 conn l1
   { 190, 138, 96, 134, 225, 133, 199, 11, 15, 0, 224, 15, 4, 202, 147, 70 }, // 1 conn l2
-  { 254, 249, 249, 66, 192, 252, 199, 17, 175, 7, 30, 1, 7, 192, 144, 48 } // 2 Arduino
+  { 254, 249, 249, 66, 192, 252, 199, 17, 175, 7, 30, 1, 7, 192, 144, 48 }, // 2 Arduino
+  { 255, 255, 243, 127, 254, 159, 255, 63, 15, 64, 96, 240, 251, 255, 6, 1 } //3 WF8266T
 };
 bool isIcon = false;
 
@@ -141,7 +142,7 @@ uint8_t numberCode [7] [15] [3] = {
   }
 };
 
-uint8_t iconCode [10] [6] = {
+uint8_t iconCode [16] [6] = {
   {0, 0, 0, 0, 0, 0}, // 0 space
   {0, 96, 182, 97, 216, 102}, // 1 %
   {0, 0, 184, 223, 1, 0}, // 2 offline
@@ -152,6 +153,12 @@ uint8_t iconCode [10] [6] = {
   {128, 169, 250, 253, 86, 88}, //7 human
   {128, 225, 127, 252, 31, 126}, //8 rain
   {0, 0, 254, 171, 209, 0}, //9 temperature
+  {0, 193, 240, 251, 25, 8}, //10 UP
+  {0, 193, 241, 33, 240, 120 }, //11 LEFT
+  {0, 128, 71, 248, 56, 8 }, //12 RIGHT
+  {0, 129, 249, 101, 18, 127 }, //13 TurnLeft
+  {224, 159, 200, 252, 48, 8 }, //14 TurnRight
+  {0, 128, 240, 39, 18, 0 } //15 facebook 
 };
 
 void displayIcon(uint8_t n)
@@ -198,18 +205,10 @@ void displayNumber(uint8_t n, uint8_t index)
     }
     if (i == 2 && index < 6 && displayBuffer[index + 1] < 255) //check last number
     {
-      if (index != 5)
+      if (index != 4)
         value += numberCode[index + 1][displayBuffer[index + 1]][0];
-    }
-    if (index == 5 && i == 0) // Position 6 process
-    {
-      led_begin(0x44);
-      shiftOut(dio, clk, LSBFIRST, 0xC5);
-      if (displayBuffer[index - 1] == 255)
-        shiftOut(dio, clk, LSBFIRST, numberCodeP6[n]);
       else
-        shiftOut(dio, clk, LSBFIRST, numberCodeP6[n] + numberCode[index - 1][displayBuffer[index - 1]][2]);
-      led_end(0x8f);
+        value += numberCodeP6[displayBuffer[5]];
     }
 
     led_begin(0x44);
