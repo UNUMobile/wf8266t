@@ -54,7 +54,9 @@ void setup() {
   redBtn(60, 1);
   redBtn(120, 2);
   redBtn(180, 3);
-  connectWiFi();
+  //connectWiFi();
+  tft.setCursor(0, 5);
+  tft.println(ESP.getChipId());
 }
 
 void connectWiFi()
