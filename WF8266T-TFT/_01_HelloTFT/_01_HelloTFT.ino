@@ -1,11 +1,13 @@
 #include "SPI.h"
 #include "Adafruit_GFX.h"
-#include "ESP8266_ILI9341.h"
+#include "Adafruit_ILI9341.h"
 
-ESP8266_ILI9341 tft = ESP8266_ILI9341();
+// For the WF8266TFT shield, these are the default.
+#define TFT_DC 5
+#define TFT_CS 15
+Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC);
 
 void setup() {
-  pinMode(5,OUTPUT);
   pinMode(16,OUTPUT);
   digitalWrite(16,HIGH);
   Serial.begin(115200);
