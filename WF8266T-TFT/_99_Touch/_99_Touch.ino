@@ -1,9 +1,10 @@
 #include <ESP8266WiFi.h>
 #include "SPI.h"
 #include "Adafruit_GFX.h"
-#include "ESP8266_ILI9341.h"
-
-ESP8266_ILI9341 tft = ESP8266_ILI9341();
+#include "Adafruit_ILI9341.h"
+#define TFT_DC 5
+#define TFT_CS 15
+Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC);
 #define T_CLK 0
 #define T_CS 2
 #define T_DIN 4
