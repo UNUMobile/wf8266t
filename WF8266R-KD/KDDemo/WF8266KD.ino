@@ -1,5 +1,7 @@
 //顯示資料，共7位數。要顯示的數字放這進這個陣列，對應位置 1~8
 uint8_t displayBuffer[] = {0, 0, 0, 0, 0, 0, 0, 0}; //255 全暗不顯示
+//小數點位置
+uint8_t pointAddr = 8;
 //顯示位址，不需要更動
 uint8_t displayAddr [] = {0xc1, 0xc3, 0xc5, 0xc7, 0xc9, 0xcb, 0xcd, 0xcf};
 //0 ~ 9 字型陣列
@@ -49,6 +51,9 @@ void kdShow(uint8_t level)
 
     if (displayBuffer[i] == 255)
       current = 0;
+
+    if (i + 1 == pointAddr)
+      current = current + 128;  
 
     led_begin(0x44);
     shiftOut(dio, clk, LSBFIRST, displayAddr[i]);
