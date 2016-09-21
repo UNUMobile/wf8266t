@@ -16,6 +16,6 @@ WF8266T 使用手冊
 * 進階 MAKER 可以使用 Arduino IDE 開發 WF8266R, 就像開發 Arduino 一樣, 無痛轉換
 * 可加掛 BLE4.0 模組，實現 iBeacon
 * WF8266R 使用 序列 Rx Tx 可和其他設備 如：藍芽 Arduino 等等進行資料交換
-* 支援 7 位數的 8 段顯示，5位數顯示＋6X7點陣
+* 支援 7 位數的 8 段顯示，5位數顯示 + 6X7點陣
 * 專用的手機 App 支援 iOS 和 Android
 
